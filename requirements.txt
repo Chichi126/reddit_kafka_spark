@@ -1,0 +1,6 @@
+requests
+praw
+pandas
+kafka-python
+pyspark
+dotenv
