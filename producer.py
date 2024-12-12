@@ -1,7 +1,4 @@
-import pandas
-import pyspark
 import praw
-import requests
 import json
 import time
 import kafka
