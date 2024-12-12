@@ -46,15 +46,15 @@ services:
     networks:
       - kafka-network
 
-  mongodb:
-    image: mongo:latest
-    container_name: mongodb_container
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-    networks:
-      - kafka-network
+  # mongodb:
+  #   image: mongo:latest
+  #   container_name: mongodb_container
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo-data:/data/db
+  #   networks:
+  #     - kafka-network
 
   spark-master:
     image: apache/spark:3.5.1
@@ -93,9 +93,9 @@ services:
       bash -c "curl -o /opt/spark/jars/mongo-spark-connector_2.12-10.4.0.jar https://repo1.maven.org/maven2/org/mongodb/spark/mongo-spark-connector_2.12/10.4.0/mongo-spark-connector_2.12-10.4.0.jar &&
       /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077"
 
-volumes:
-  mongo-data:
-    driver: local
+# volumes:
+#   mongo-data:
+#     driver: local
 
 networks:
   kafka-network:

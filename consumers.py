@@ -5,17 +5,18 @@ import json
 
 # MongoDB Database and Collection
 database = "reddit_db"
-collection = "dataengineering_table"
+collection = "dataengineering"
 
 # Load MongoDB credentials from config.json
 with open("config.json") as f:
     config = json.load(f)
 
-mongodb_username = config["mongodb_username"]
-mongodb_password = config["mongodb_password"]
+# mongodb_username = config["mongodb_username"]
+# mongodb_password = config["mongodb_password"]
 
 # MongoDB URI
-uri = f"mongodb+srv://{mongodb_username}:{mongodb_password}@amdari-cluster.ynzr6.mongodb.net/{database}"
+#uri = f"mongodb+srv://{mongodb_username}:{mongodb_password}@amdari-cluster.ynzr6.mongodb.net/{database}"
+uri = f"mongodb+srv://chichi:5oZO6V4sJbAk4loI@amdari-cluster.ynzr6.mongodb.net/mydatabase"
 
 # Kafka Configuration
 kafka_topic = "redditstream"
@@ -45,12 +46,18 @@ kafka_df = spark.readStream \
     .option("kafka.bootstrap.servers", kafka_bootstrap_servers) \
     .option("startingOffsets", "earliest") \
     .option("subscribe", kafka_topic) \
+    .option("failOnDataLoss", "false") \
     .load()
 
 # Parse JSON messages from Kafka
-parsed_df = kafka_df.selectExpr("CAST(value AS STRING) as json_string") \
-    .select(from_json(col("json_string"), schema).alias("data")) \
-    .select("data.*")
+# parsed_df = kafka_df.selectExpr("CAST(value AS STRING) as json_string") \
+#     .select(from_json(col("json_string"), schema).alias("data")) \
+#     .select("data.*")
+
+parsed_df = kafka_df.selectExpr("CAST(value AS STRING) as json_string", "timestamp") \
+    .select(from_json(col("json_string"), schema).alias("data"), "timestamp") \
+    .select("data.*", "timestamp")
+
 
 parsed_df.printSchema()
 
@@ -86,3 +93,4 @@ query = parsed_df.writeStream \
 
 # Wait for the streaming to finish
 query.awaitTermination()
+
