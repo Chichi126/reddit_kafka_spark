@@ -1,6 +1,6 @@
 # reddit_kafka_spark
 
-![https://github.com/Chichi126/reddit_kafka_spark/blob/715b029dac1eba80683ff188a70f4d668800966c/Screenshot%202024-12-16%20at%209.59.01%20AM.png]()
+![](https://github.com/Chichi126/reddit_kafka_spark/blob/715b029dac1eba80683ff188a70f4d668800966c/Screenshot%202024-12-16%20at%209.59.01%20AM.png)
 
 
 
