@@ -102,10 +102,14 @@ Mongo CLI bash
     
   * db.dataengineering.find().pretty()
 
+![](https://github.com/Chichi126/reddit_kafka_spark/blob/f2b5d52abf6f2a41c43604b03b3583831340895e/Screenshot%202024-12-12%20at%206.06.14%20PM.png)
+
 
 Data replication can also be confirmed using MongoDB Atlas.
 
 By using Compass connected to the Atlas cluster using the URI provided in the application configuration.
+
+![](https://github.com/Chichi126/reddit_kafka_spark/blob/f2b5d52abf6f2a41c43604b03b3583831340895e/Screenshot%202024-12-16%20at%2010.35.34%20AM.png)
 
 
 Verification in VSCode using the MongoDB Extension:
