@@ -93,6 +93,9 @@ To create a kafka topic (using kafka confluent)
 >> If done correctly you will see topic created
 
 
+Here is the python code for the producer to stream data from Reddit Api ![producer.py](HERE)
+
+
 
 *Data Transformation:*
 
@@ -106,7 +109,7 @@ Data is written to MongoDB using the MongoDB-Spark connector.
 
 Each micro-batch is appended to a specified database and collection.
 
-###### Subscribing using spark and writing to Mongodb
+#### Subscribing using spark and writing to Mongodb
 
 Here is the link to the consumer python ![consumer.py](here)
 
