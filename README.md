@@ -105,24 +105,7 @@ Mongo CLI bash
 
 Data replication can also be confirmed using MongoDB Atlas.
 
-Compass connected to the Atlas cluster using the URI provided in the application configuration.
-
-#### Step 5: Monitoring and Troubleshooting
-
-*Kafka Logs:*
-
-Checked Kafka logs for topic consumption and data flow issues.
-
-run 
-<python3 producer.py>
-
-Verified offsets and partitioning.
-
-*Spark Logs:*
-
-Examined Spark logs for batch processing and connector issues.
-
-Checked for any errors in writing to MongoDB.
+By using Compass connected to the Atlas cluster using the URI provided in the application configuration.
 
 
 Verification in VSCode using the MongoDB Extension:
@@ -131,7 +114,7 @@ The MongoDB VSCode extension can connect to both local and cloud MongoDB instanc
 
 Install the Vscode extension then click on connect
 
-click on the view enter your uri including your password and username
+click on the view enter your uri including your password and username and enter
 
 *Queries were executed to verify the inserted data.*
 
