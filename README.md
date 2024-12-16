@@ -6,8 +6,10 @@
 
 ## Project Overview
 
-This project streams data from a Kafka topic to a MongoDB database using Apache Spark. The streaming data is ingested, processed, and stored in MongoDB, where it is verified and 
-accessed for analytics or downstream applications. Docker Compose is used to manage and deploy all the required services in a streamlined manner
+This project uses Apache Spark to stream data from a Kafka topic to a MongoDB database. The streaming data is ingested, processed, and stored in MongoDB, verified and 
+accessed for analytics or downstream applications. 
+
+Docker Compose is used to manage and deploy all the required services in a streamlined manner
 
 ## Step 1: Prerequisites
 
@@ -18,8 +20,6 @@ Docker and Docker Compose
 Apache Kafka and Confluent components
 
 Apache Spark
-
-MongoDB
 
 MongoDB Atlas or a local MongoDB instance
 
@@ -38,7 +38,7 @@ Python development environment with PySpark installed
 
 ## Step 2: Setting Up Docker Compose
 
-Docker Compose was used to spin up services for Kafka, Spark, and MongoDB. Here's an outline of the configuration:
+Docker Compose was used to spin up Kafka, Spark, and MongoDB services. Here's an outline of the configuration:
 
 ##### Kafka Setup:
 
