@@ -46,6 +46,8 @@ Zookeeper and Kafka brokers were defined in the docker-compose.yml file.
 
 A Kafka topic was pre-configured using a Confluent control center or command-line tools.
 
+![docker-compose.yml](HERE)
+
 ##### MongoDB Setup:
 
 MongoDB was set up in Docker with a mapped volume to persist data.
