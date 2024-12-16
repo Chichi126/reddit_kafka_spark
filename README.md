@@ -46,7 +46,7 @@ Zookeeper and Kafka brokers were defined in the docker-compose.yml file.
 
 A Kafka topic was pre-configured using a Confluent control center or command-line tools.
 
-![HERE](docker-compose.yml)
+
 
 ##### MongoDB Setup:
 
@@ -60,6 +60,9 @@ Spark master and worker nodes were defined with proper networking.
 
 Spark image was pulled with the necessary connectors for Kafka and MongoDB pre-installed.
 
+
+![HERE](docker-compose.yml)
+
 ## Step 3: Writing the Streaming Application
 
 The Python application reads data from Kafka, processes it using Spark, and writes it to MongoDB. 
@@ -72,6 +75,25 @@ Spark reads the data stream from Kafka using the Kafka-Spark connector.
 
 The Kafka topic is subscribed to, and data is read in JSON format.
 
+To create a kafka topic (using kafka confluent)
+
+>> docker exec -it < kafka container-name > /bin/sh
+
+>> If /bin/sh doesn’t give you access to the required tools, try using /bin/bash instead
+
+>> cd /bin
+
+>> ls 
+
+>> kafka-topics --create --topic <topic-name> --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+**The command creates a Kafka topic named <topic-name> with 1 partition and a replication factor of 1, using the Kafka broker at localhost:9092 as specified in the Docker configuration*
+
+
+>> If done correctly you will see topic created
+
+
+
 *Data Transformation:*
 
 The data stream is processed using PySpark DataFrame APIs.
@@ -83,6 +105,8 @@ Schema definitions ensure proper parsing of JSON data.
 Data is written to MongoDB using the MongoDB-Spark connector.
 
 Each micro-batch is appended to a specified database and collection.
+
+###### Subscribing using spark and writing to Mongodb
 
 Here is the link to the consumer python ![consumer.py](here)
 
