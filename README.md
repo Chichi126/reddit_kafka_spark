@@ -84,6 +84,8 @@ Data is written to MongoDB using the MongoDB-Spark connector.
 
 Each micro-batch is appended to a specified database and collection.
 
+Here is the link to the consumer python ![consumer.py](here)
+
 #### Step 4: Verifying MongoDB Data
 
 *Accessing MongoDB Locally:*
