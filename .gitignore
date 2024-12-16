@@ -1,6 +1,7 @@
-env
-config.json
+*env
+*config.json
 .env
-main.py
-consumers.py
-test.py
+*main.py
+*consumers.py
+*test.py
+checkpoint

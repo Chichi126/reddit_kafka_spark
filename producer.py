@@ -53,7 +53,7 @@ def get_data():
             producer.flush()
             print("**"*100)
             print(f" Comment: {data}") # Print the comment body (comment.body)
-            time.sleep(30)  
+            time.sleep(10)  
     except Exception as e:
         print(f"An error occurred: {e}")
 
