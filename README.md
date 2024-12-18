@@ -81,19 +81,19 @@ To create a kafka topic (using kafka confluent)
 
 ```
 
->> docker exec -it < kafka container-name > /bin/sh
+docker exec -it < kafka container-name > /bin/sh
 
->> If /bin/sh doesn’t give you access to the required tools, try using /bin/bash instead
+If /bin/sh doesn’t give you access to the required tools, try using /bin/bash instead
 
->> cd /bin
+cd /bin
 
->> ls
+ls
 
 ```
 
 **The command creates a Kafka topic named <topic-name> with 1 partition and a replication factor of 1, using the Kafka broker at localhost:9092 as specified in the Docker configuration*
 ```
->> kafka-topics --create --topic <topic-name> --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+kafka-topics --create --topic <topic-name> --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 
 >> If done correctly you will see topic created
