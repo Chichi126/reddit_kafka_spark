@@ -3,12 +3,6 @@
 ![](https://github.com/Chichi126/reddit_kafka_spark/blob/715b029dac1eba80683ff188a70f4d668800966c/Screenshot%202024-12-16%20at%209.59.01%20AM.png)
 
 
-# Example Code Block with Copy Button
-
-```python
-def hello_world():
-    print("Hello, World!")
-
 
 
 
@@ -165,5 +159,7 @@ Basic queries were run using the MongoDB shell or VSCode extension to ensure dat
 
 Query Example:
 
-* db.dataengineering.find().limit(5);*
+```
+    bash
+db.dataengineering.find().limit(5)
 
