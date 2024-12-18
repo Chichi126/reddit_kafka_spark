@@ -128,16 +128,18 @@ MongoDB was accessed locally through the Docker container for verification.
 The mongo CLI or Compass UI was used to inspect the created database and collection.
 
 Mongo CLI bash 
+```
 
-  * mongo "< your URI >" (to connect to the cluster)
+  mongo "< your URI >" (to connect to the cluster)
     
-  * show dbs (to display the databases present in the cluster)
+  show dbs (to display the databases present in the cluster)
     
-  * use dbs  (TO enter into that particular database)
+  use dbs  (TO enter into that particular database)
     
-  * show collections (to display all the collections <tables> inside the database)
+  show collections (to display all the collections <tables> inside the database)
     
-  * db.dataengineering.find().pretty()
+  db.dataengineering.find().pretty()
+```
 
 ![](https://github.com/Chichi126/reddit_kafka_spark/blob/f2b5d52abf6f2a41c43604b03b3583831340895e/Screenshot%202024-12-12%20at%206.06.14%20PM.png)
 
