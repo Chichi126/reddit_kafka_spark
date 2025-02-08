@@ -1,6 +1,6 @@
 pymongo
 praw
 pandas
-kafka-python
+confluent-kafka[avro,json,protobuf]
 pyspark
-dotenv
+python-dotenv

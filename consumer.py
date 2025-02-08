@@ -11,11 +11,13 @@ mongodb_username = config["mongodb_username"]
 mongodb_password = config["mongodb_password"]
 
 # MongoDB Database and Collection
-database = "reddit_database"  # The database in MongoDB where you want to store the data
-collection = "dataengineering"  # The collection name in MongoDB
+database = "reddit_politics"  # The database in MongoDB where you want to store the data
+collection = "politics"  # The collection name in MongoDB
 
 # MongoDB URI
+
 uri = f"mongodb+srv://{mongodb_username}:{mongodb_password}@amdari-cluster.ynzr6.mongodb.net/{database}?retryWrites=true&w=majority"
+
 
 # Kafka Configuration
 kafka_topic = "redditstream"  # Kafka topic to consume from
